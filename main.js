@@ -1,8 +1,23 @@
 const body = document.querySelector('body')
 const grid_container = document.createElement('div');
+const size_div = document.createElement('div');
+const size_input = document.createElement('input');
+const size_value = document.createElement('h1');
+
 grid_container.classList.add('grid-container');
+size_div.classList.add('size-div');
+size_input.setAttribute('id', 'size-input');
+size_value.classList.add('size-value');
+
+size_input.type = 'range';
+size_input.min = '1';
+size_input.max = '64';
+size_value.textContent = size_input.value;
+
+size_div.append(size_input, size_value);
 
 body.appendChild(grid_container);
+body.appendChild(size_div);
 
 let rows = 16;
 let columns = 16;
