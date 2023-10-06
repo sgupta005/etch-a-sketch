@@ -4,9 +4,10 @@ grid_container.classList.add('grid-container');
 
 body.appendChild(grid_container);
 
-//Using for loop to create 16 by 16 grid
-for (let i=0; i<16; i++){
-    for (let j=0; j<16; j++){
+let rows = 16;
+let columns = 16;
+for (let i=0; i<rows; i++){
+    for (let j=0; j<columns; j++){
         const grid_item = document.createElement('div');
         grid_item.classList.add('grid-item'); 
         grid_container.appendChild(grid_item);
