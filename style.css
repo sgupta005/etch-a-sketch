@@ -13,8 +13,8 @@
     flex-wrap: wrap;
 }
 .grid-item{
-    flex-basis: calc(100%/16);
-    padding-bottom: calc(100%/16);
+    /* flex-basis: calc(100%/64);
+    padding-bottom: calc(100%/64); */
     background-color: lightblue;
 }
 .hover{
