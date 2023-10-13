@@ -44,7 +44,8 @@ function colorChangeOnMouseHover(){
     const grid_items = document.querySelectorAll('.grid-item');
     for (let grid_item of grid_items){
         grid_item.addEventListener('mouseenter', ()=>{
-            grid_item.classList.add('hover'); 
+            grid_item.style.backgroundColor = getRandomColor();
+
         })
         // grid_item.addEventListener('mouseleave', ()=>{
         //     console.log('Mouse leave');
@@ -64,6 +65,18 @@ size_input.addEventListener('input', ()=>{
     
 })
 
+function getRandomColor() {
+    const letters = "0123456789ABCDEF"; // Hexadecimal characters
+    let color = "#";
+  
+    // Generate a random hex color code (6 characters)
+    for (let i = 0; i < 6; i++) {
+      const randomIndex = Math.floor(Math.random() * 16);
+      color += letters[randomIndex];
+    }
+  
+    return color;
+  }
 
 
 
